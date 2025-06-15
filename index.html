@@ -30,23 +30,38 @@
             </div>
         </div>
     </section>
+
     <section class="projects" id="projects-list">
         <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Explore my data analysis and visualization projects</p>
+            <div class="section-header fade-in">
+                <h2 class="gradient-text">Featured Projects</h2>
+                <p class="subtitle">Transforming Data into Insights</p>
             </div>
             
             <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="excel">Excel Analytics</button>
-                <button class="filter-btn" data-filter="sql">SQL & Databases</button>
-                <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>
-                <button class="filter-btn" data-filter="visualization">Visualization</button>
+                <button class="filter-btn hover-effect" data-filter="excel">
+                    <i class="fas fa-table"></i>
+                    <span>Excel</span>
+                </button>
+                <button class="filter-btn hover-effect" data-filter="powerbi">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Power BI</span>
+                </button>
+                <button class="filter-btn hover-effect" data-filter="sql">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </button>
+                <button class="filter-btn hover-effect" data-filter="python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </button>
             </div>
 
-            <div id="projects-container" class="project-grid">
-                <!-- Projects will be dynamically loaded here -->
+            <div id="projects-container" class="project-grid animated-grid">
+                <!-- Project cards will be added here dynamically -->
+                <div class="project-placeholder pulse"></div>
+                <div class="project-placeholder pulse"></div>
+                <div class="project-placeholder pulse"></div>
             </div>
         </div>
     </section>
