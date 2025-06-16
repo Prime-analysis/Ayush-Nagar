@@ -272,6 +272,16 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
+/* Adding style for name in hero section */
+.hero-content h1.name {
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
 .hero p {
     font-size: 1.6rem;
     margin-bottom: 3rem;
@@ -299,6 +309,25 @@ header h1 {
 .hero .btn:hover {
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 12px 40px rgba(0, 191, 111, 0.4);
+}
+
+/* Hero description styles */
+.hero-content .intro-greeting {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+}
+
+.hero-content .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    padding: 1rem 0;
 }
 
 /* Modern Animations */
@@ -1024,6 +1053,64 @@ section h2::after {
 
 .contact-item a:hover {
     color: var(--secondary-color);
+}
+
+/* Contact Details Hover Effect */
+.contact-info {
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-details {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    width: max-content;
+    z-index: 100;
+}
+
+.contact-info:hover .contact-details {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.contact-details h3 {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-details p {
+    color: #000000;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    margin-right: 0.5rem;
+    color: var(--ocean-medium);
+}
+
+.contact-details a {
+    color: var(--ocean-medium);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-details a:hover {
+    color: var(--ocean-deep);
 }
 
 /* Project Cards with Glass Effect */
