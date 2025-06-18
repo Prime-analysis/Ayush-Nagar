@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Nagar Portfolio </title>
+    
+    <!-- Performance Optimizations -->
+    <link rel="preload" as="image" href="assets/images/ai-background.jpg">
+    <link rel="preload" as="style" href="styles.css">
+    <link rel="preload" as="style" href="responsive.css">
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" crossorigin>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/filter-handlers.js" defer></script>
+    <script src="js/touch-handlers.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <ul class="nav-links" role="navigation">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#projects-list" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="name gradient-header">Ayush Nagar</h1>
+                <p class="intro-greeting">Hi, I'm </p>
+                <p class="intro-text">A full-time data whisperer and part-time chart artist, turning chaos into clean, killer dashboards. I speak fluent Excel, write poetry in SQL, paint visuals with Power BI & Tableau, and automate boredom with Python. I believe data shouldn't be dull — so I make it smart, chill and storytelling-ready. Dive into my world of dashboards, insights, and a little dash of humor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects-list">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="gradient-header">Expertise Analyst's Toolbox</h2>
+                <p class="subtitle">Transforming Data into Insights</p>
+            </div>
+            
+            <div class="projects-filter" role="tablist" aria-label="Filter projects by technology">
+                <button class="filter-btn hover-effect" data-filter="excel" role="tab" aria-label="Filter Excel projects" aria-selected="false">
+                    <i class="fas fa-table" aria-hidden="true"></i>
+                    <span>Excel</span>
+                </button>
+                <a href="powerbi-projects.html" class="filter-btn hover-effect" role="tab" aria-label="View Power BI projects">
+                    <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                    <span>Power BI</span>
+                </a>
+                <a href="tableau-projects.html" class="filter-btn hover-effect" role="tab" aria-label="View Tableau projects">
+                    <svg class="tableau-icon" width="16" height="16" viewBox="0 0 16 16" style="margin-right: 8px;" aria-hidden="true">
+                        <path fill="currentColor" d="M8.48 0v1.56H7.36V0H6.24v1.56H5.12V0H3.52v1.56H2.4V0H0v2.4h1.56v1.12H0v1.6h1.56v1.12H0v1.6h1.56v1.12H0v1.6h1.56v1.12H0v2.4h2.4v-1.56h1.12V16h1.6v-1.56h1.12V16h1.6v-1.56h1.12V16H12v-2.4h-1.56v-1.12H12v-1.6h-1.56V9.76H12v-1.6h-1.56V7.04H12v-1.6h-1.56V4.32H12V2.4h-2.4v1.56H8.48V2.4H6.88v1.56H5.76V2.4H4.16v1.56H3.04V2.4H2.4v1.92h1.56v1.12H2.4v1.6h1.56v1.12H2.4v1.6h1.56v1.12H2.4v1.6h1.56v1.12H2.4v1.92h.64v-1.56h1.12v1.56h1.6v-1.56h1.12v1.56h1.6v-1.56h1.12v1.56h.64v-1.92H8.48v-1.12H10v-1.6H8.48V9.76H10v-1.6H8.48V7.04H10v-1.6H8.48V4.32H10V2.4H8.48zm-2.24 8v1.6H4.64v-1.6h1.6zm0-3.2v1.6H4.64v-1.6h1.6zm3.2 3.2v1.6H7.84v-1.6h1.6zm0-3.2v1.6H7.84v-1.6h1.6z"/>
+                    </svg>
+                    <span>Tableau</span>
+                </a>
+                <button class="filter-btn hover-effect" data-filter="sql" role="tab" aria-label="Filter SQL projects" aria-selected="false">
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <span>SQL</span>
+                </button>
+                <a href="python-projects.html" class="filter-btn hover-effect" role="tab" aria-label="View Python projects">
+                    <i class="fab fa-python" aria-hidden="true"></i>
+                    <span>Python</span>
+                </a>
+                <a href="projects-micro.html" class="filter-btn hover-effect" role="tab" aria-label="View Project Library">
+                    <i class="fas fa-book" aria-hidden="true"></i>
+                    <span>Project Library</span>
+                </a>
+            </div>
+
+            <div id="projects-container" class="project-grid animated-grid">
+                <!-- Project cards will be added here dynamically -->
+                <div class="project-placeholder pulse"></div>
+                <div class="project-placeholder pulse"></div>
+                <div class="project-placeholder pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="github" id="github-activity">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="gradient-header">GitHub Activity</h2>
+                <p>Check out my latest open-source contributions and projects</p>
+            </div>
+            <div class="github-content">
+                <div class="github-card">
+                    <i class="fab fa-github fa-3x"></i>
+                    <h3 class="gradient-header">Latest Repositories</h3>
+                    <a href="https://github.com/Prime-analysis" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-code-branch"></i> View GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+    <div class="container">            <div class="section-header">
+                <h2 class="gradient-header">Get in Touch</h2>
+            <p>Let's connect and discuss data-driven possibilities</p>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card">
+                <i class="fas fa-envelope fa-2x"></i>
+                <h3 class="gradient-header">Contact Details</h3>
+                <div class="contact-details">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mr.ayush482@gmail.com">mr.ayush482@gmail.com</a>
+                    </p>
+                    <p>
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/ayush-nagar-117943288" target="_blank">
+                            linkedin.com/in/ayush-nagar-117943288
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer style="background: var(--accent-color); color: var(--white); padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2025 Ayush Nagar. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
